@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Cervical Cancer Prediction</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+  <nav class="purple darken-4 accent-3" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center red-text">Cervical Cancer Prediction</h1>
+      <div class="row center">
+        <h5 class="header col s12 light black-text">Predict the Risk of Geting Cervical Cancer!
+        <br>
+        </h5>
+      </div>
+
+<div class="row">
+    <form action='/predict' method="post" class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+            <label for="first_name" style="font-size: 20px"><b>Age</b></label>
+            <br>
+            <input placeholder="Age" name="age" id="age" type="text" class="validate">
+        </div>
+
+        <div class="input-field col s4">
+            <label for="_name" style="font-size: 20px"><b>Marital_status</b></label>
+            <br>
+            <input id="_name" name="marital_status" placeholder="1 - Single/2 - Married/3 - Divorced/4 - Widowed" type="text" class="validate">
+        </div>
+          <div class="input-field col s4">
+            <label for="_name" style="font-size: 20px"><b>educational_status</b></label>
+            <br>
+            <input id="_name" name="educational_status" placeholder="1 - Ilitrate/2 - Can Read and Write/3 - Elementary/4 - HIgh School/5 - Tertiary School" type="text" class="validate">
+        </div>
+
+        <div class="input-field col s4">
+            <label for="last_name" style="font-size: 20px"><b>Number_of_Birth</b></label>
+              <br>
+            <input id="number_of_Birth" name="number_of_Birth" placeholder="Number_of_Birth"  type="text" class="validate">
+          </div>
+          <div class="input-field col s4">
+            <label for="last_name" style="font-size: 20px"><b>History_of_STI Self or Partner</b></label>
+              <br>
+            <input id="_name" name="history_of_STI" placeholder="1 - yes/2 - no/3 - UN"  type="text" class="validate">
+          </div>
+         <div class="input-field col s4">
+            <label for="smoker" style="font-size: 20px"><b>VIA result</b></label>
+            <br>
+            <input id="VIA_result" name="VIA result" placeholder="1 - VIA positive/0 - VIA negative" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+
+            <label for="last_name" style="font-size: 20px"><b>Occupation</b></label>
+              <br>
+            <input id="target_population_category" name="target_population_category" placeholder="1 - female commercial sex worker/2 - long distance drivers/3 - mobile or daily laborers/4 - prisoners/5 - general population/6 - other  MARPS/ 7- other"  type="text" class="validate">
+ 
+          </div>
+
+        <div class="input-field col s4">
+            <label for="smoker" style="font-size: 20px"><b>Hiv Positive Linked with ART</b></label>
+            <br>
+            <input id="hiv_positive_linked_wit_art" name="hiv_positive_linked_wit_art" placeholder="0 - Yes/1 - No" type="text" class="validate">
+        </div>
+
+        <div class="input-field col s4">
+            <label for="region" style="font-size: 20px"><b>Screened With Via</b></label>
+            <br>
+            <input id="screened_with_via" name="screened_with_via" placeholder="1 - VIA/2 - HPV DNA and VIA" type="text" class="validate">
+        </div>
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light lamber lighten-1">Predict Probability</button>
+      </div>
+    </form>
+      </div>
+      <div class="dark-text">
+      <br>
+        <h4>{{pred}}</h4><br>
+      </div>
+    </div>
+  </div>
+
+
+    <br><br>
+  </div>
+  </div>>
+
+  <footer class="page-footer light-blue lighten-1">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Project Bio</h5>
+          <p class="grey-text text-lighten-4">This Project is Submitted for the partial fullfilment of masters of science in computer science for college of informatics department of computer science
+            prepared by Kalkidan Asmare under advisation of Mr.Abebe Alemu(Ass.professor)</p>
+        </div>
+        
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div> 
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">LinkedIn</a></li>
+            <li><a class="white-text" href="#!">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="https://github.com/KalAsmare">Kalkidan Asmare</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="../static/js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
