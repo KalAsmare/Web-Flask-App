@@ -23,11 +23,10 @@ def predict():
     pred = model.predict(final)[0]
     print(pred)
 
-    
     if pred < 0:
         return render_template('op.html', pred='Error calculating Amount!')
     else:
-        return render_template('op.html', pred='Predicted result is {0:.3f}'.format(pred))
+        return render_template('op.html', pred='predicted result is {0:.3f}'.format(pred))
 
 if __name__ == '__main__':
     app.run(debug=True)
