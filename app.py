@@ -1,4 +1,4 @@
-from flask import Flask, request, url_for, redirect, render_template, sklearn
+from flask import Flask, request, url_for, redirect, render_template
 import pickle
 
 import numpy as np
