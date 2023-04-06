@@ -28,4 +28,4 @@ def predict():
         return render_template('op.html', pred='predicted result is {0:.3f}'.format(pred))
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
