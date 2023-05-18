@@ -1,5 +1,6 @@
 from flask import Flask, request, url_for, redirect, render_template
 import pickle
+#import xgboost
 
 import numpy as np
 
@@ -22,10 +23,13 @@ def predict():
     pred = model.predict(final)[0]
     print(pred)
 
-    if pred < 0:
-        return render_template('op.html', pred='Error calculating Amount!')
+    if pred == 1:
+        res_val = "** cervical cancer **"
     else:
-        return render_template('op.html', pred='predicted result is {0:.3f}'.format(pred))
+        res_val = "❤❤no cervical cancer❤❤"
+
+    return render_template('op.html', pred='Patient has {}'.format(res_val))
+
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)
